@@ -619,7 +619,13 @@ qq.extend(qq.FileUploader.prototype, {
     qq.remove(this._find(item, 'cancel'));
     qq.remove(this._find(item, 'spinner'));
 
-    if (result.success){
+    var success = false;
+    for(items in result){
+      success = true;
+      break;
+    }
+
+    if (success){
       qq.addClass(item, this._classes.success);
     } else {
       qq.addClass(item, this._classes.fail);
