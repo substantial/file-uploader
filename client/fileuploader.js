@@ -445,9 +445,6 @@ qq.FileUploaderBasic.prototype = {
     this._options.showMessage(message);
   },
   _formatFileName: function(name){
-    if (name.length > 33){
-      name = name.slice(0, 19) + '...' + name.slice(-13);
-    }
     return name;
   },
   _isAllowedExtension: function(fileName){
