@@ -1,4 +1,7 @@
 /**
+ * Artifex File Uploader
+ *
+ * Forked from -
  * http://github.com/valums/file-uploader
  *
  * Multiple file upload component with progress-bar, drag-and-drop.
