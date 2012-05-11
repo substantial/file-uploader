@@ -490,7 +490,7 @@ qq.FileUploader = function(o){
 
     template: '<div class="qq-uploader">' +
       '<div class="qq-upload-drop-area"><span>Drop files here to upload</span></div>' +
-      '<div class="qq-upload-button">Upload a file</div>' +
+      '<div class="qq-upload-button"><label for="file">Upload files: </label></div>' +
       '<ul class="qq-upload-list"></ul>' +
       '</div>',
 
@@ -807,22 +807,6 @@ qq.UploadButton.prototype = {
 
     input.setAttribute("type", "file");
     input.setAttribute("name", this._options.name);
-
-    qq.css(input, {
-      position: 'absolute',
-      // in Opera only 'browse' button
-      // is clickable and it is located at
-      // the right side of the input
-      right: 0,
-      top: 0,
-      fontFamily: 'Arial',
-      // 4 persons reported this, the max values that worked for them were 243, 236, 236, 118
-      fontSize: '118px',
-      margin: 0,
-      padding: 0,
-      cursor: 'pointer',
-      opacity: 0
-    });
 
     this._element.appendChild(input);
 
